@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Roboto&display=swap");
 
 :root {
-    --grid-cols: 16;
-    --grid-rows: 16;
+    --grid-cols: 1;
+    --grid-rows: 1;
 }
 
 * {
@@ -10,11 +10,18 @@
 }
 
 .container{
+    box-sizing: border-box;
     display: grid;
-    grid-gap: 0.001rem;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    background-color: rgba(255, 225, 188, 0.452);
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* height: 300px;
+    width: 300px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .grid-item{
@@ -23,6 +30,3 @@
     text-align: center;
 }
 
-.grid-item:hover{
-    background-color: rgba(255, 255, 188, 0.600);
-}
